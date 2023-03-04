@@ -1,22 +1,22 @@
 // making altars mocking function 
 
 function altCaps(str) {
-   let newStr =""
-  for(let i = 0; i<str.length; i++){
-     if(i % 2 === 0){
-       newStr += str[i].toUpperCase()
-     } else {
-       newStr += str[i]
-     }
-     
+  let newStr = ""
+  for (let i = 0; i < str.length; i++) {
+    if (i % 2 === 0) {
+      newStr += str[i].toUpperCase()
+    } else {
+      newStr += str[i]
+    }
+
   }
   return newStr
 }
 
 
 
-//console.log(altCaps("I'm almost done to get"))
-//console.log(altCaps("let us have your thoughts about our relationship"));
+console.log(altCaps("I'm almost done to get"))
+console.log(altCaps("let us have your thoughts about our relationship"));
 
 /* toTitleCase
 Write a function that will capitalize every word in a sentence.  
@@ -35,17 +35,17 @@ Example Output: "Scrimba"
 Hint: Trying using slice() and .toUpperCase()
 */
 
-function capitalizeWord(word){
-    return word[0].toUpperCase() + word.slice(1);
+function capitalizeWord(word) {
+  return word[0].toUpperCase() + word.slice(1);
 }
 
 /* 
 Now write a function that capitalizes every word in a sentence. 
 How can you reuse the function you just wrote? 
-*/ 
+*/
 
-function toTitleCase(str){
-  return str.split(" ").map(word=>{
+function toTitleCase(str) {
+  return str.split(" ").map(word => {
     return capitalizeWord(word)
   }).join(" ")
 }
@@ -53,3 +53,31 @@ function toTitleCase(str){
 // Test your functions
 console.log(capitalizeWord("pumpkin"));
 console.log(toTitleCase("pumpkin pranced purposefully across the pond"));
+
+/*Write a program to loop through all the ID numbers and print their prize. 
+Your function's output should look something like this: 
+
+1 - :(
+2 - :(
+3 - Vacation! 
+4 - :(
+5 - $100,000 bonus!
+
+Hint: Remainder operator, modulo 
+ */
+
+function awardBonuses() {
+  for (let i = 0; i < 100; i++) {
+    if (i % 5 === 0) {
+      console.log('$100,000')
+    } else if (i % 3 === 0) {
+      console.log('Vacation!')
+    } else {
+      console.log(':(')
+    }
+  }
+}
+
+
+
+awardBonuses();
