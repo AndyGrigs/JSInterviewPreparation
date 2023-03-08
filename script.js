@@ -120,12 +120,12 @@ function emojifyPhrase(phrase){
 
 
 
-console.log(emojifyWord(":heart:"));
-console.log(emojifyWord(":flower:"));
-console.log(emojifyWord("elephant"));
+// console.log(emojifyWord(":heart:"));
+// console.log(emojifyWord(":flower:"));
+// console.log(emojifyWord("elephant"));
 
-console.log(emojifyPhrase("I :heart: my :cat:"));
-console.log(emojifyPhrase("I :heart: my :elephant:"));
+// console.log(emojifyPhrase("I :heart: my :cat:"));
+// console.log(emojifyPhrase("I :heart: my :elephant:"));
 
 
 
@@ -140,5 +140,5 @@ function isAnagram(str1, str2) {
 }
 
 
-console.log(isAnagram("inch", "chin"));
-console.log(isAnagram("night", "thing"));
+// console.log(isAnagram("inch", "chin"));
+// console.log(isAnagram("night", "thing"));
