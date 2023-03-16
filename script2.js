@@ -59,7 +59,7 @@ const eggScrambleRecipe = [
 ]
 
 function removeDupesFromArray(arr) {
-
+ return Array.from(new Set(eggScrambleRecipe))
 }
 
 console.log(removeDupesFromArray(eggScrambleRecipe));
