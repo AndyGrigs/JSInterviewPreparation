@@ -19,7 +19,7 @@ function countChars(str) {
 
   const name = str.toLowerCase().split(' ').join('')
   for (let i = 0; i <= name.length; i++) {
-    if(!count[name[i]]){
+    if (!count[name[i]]) {
       count[name[i]] = 1
     } else {
       count[name[i]] += 1
@@ -59,7 +59,82 @@ const eggScrambleRecipe = [
 ]
 
 function removeDupesFromArray(arr) {
- return Array.from(new Set(eggScrambleRecipe))
+  const res = []
+  arr.forEach(item => {
+    if (!res.includes(item)) {
+      res.push(item)
+    }
+  })
+  return res
 }
 
-console.log(removeDupesFromArray(eggScrambleRecipe));
+//console.log(removeDupesFromArray(eggScrambleRecipe));
+
+
+
+/* 
+Scrimba mascot Pumpkin has won the grand prize at an international 
+cat show. Below are Pumpkin's scores from the judges, as well as all the 
+prizes he's won. In all the excitement of victory,
+they've become a jumbled mess of nested arrays. Let's 
+help Pumpkin by sorting it out. 
+
+Write a function to flatten nested arrays of strings or
+numbers into a single array. There's a method
+for this, but pratice both doing it manually and using the method. 
+
+Example input: [1, [4,5], [4,7,6,4], 3, 5]
+Example output: [1, 4, 5, 4, 7, 6, 4, 3, 5]
+*/
+
+const kittyScores = [
+  [39, 99, 76], 89, 98, [87, 56, 90],
+  [96, 95], 40, 78, 50, [63]
+];
+
+const kittyPrizes = [
+  ["💰", "🐟", "🐟"], "🏆", "💐", "💵", ["💵", "🏆"],
+  ["🐟", "💐", "💐"], "💵", "💵", ["🐟"], "🐟"
+];
+
+function flatten(arr) {
+  let resArr = []
+  arr.forEach(el => {
+    if(!Array.isArray(el)){
+resArr.push(el)
+} else {
+      el.forEach(i=>{
+        resArr.push(i)
+      })
+}
+  })
+return console.log(resArr)
+}
+
+console.log(flatten(kittyPrizes));
+//console.log(flatten(kittyScores));
+
+
+
+/*
+Alex from Scrimba wants to know how many new students have attended 
+Scrimba's weekly Town Hall event this year. 
+
+He has an array of first-time attendees for each month of the year. 
+Help him find the total number of attendees! Your function should
+take in an array and return a number representing the total number
+of new attendees. 
+
+Example input: [1,2,3]
+Example output: 6
+ */
+
+const studentCount = [50, 53, 61, 67, 60, 70, 78, 80, 80, 81, 90, 110];
+
+function sumArray(arr) {
+  let sum = 0
+arr.forEach(item => sum += item)
+return sum 
+}
+
+console.log(sumArray(studentCount));
