@@ -1,7 +1,5 @@
 
-import {panic} from './challange/panic'
-console.log(panic("I'm almost out of coffee"));
-console.log(panic("winter is coming"))
+
 
 /* Whispering function 
 Write a function `whisper` that takes in a sentence 
@@ -25,8 +23,7 @@ if(str.endsWith("!")){
   return "sh..." + str.toLowerCase()
 }
 
-//console.log(whisper("PLEASE STOP SHOUTING."));
-//console.log(whisper("MA'AM, this is a Wendy's!"));
+
 
 /*  Emojify!
 
