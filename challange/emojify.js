@@ -48,3 +48,12 @@ function emojifyWord(word){
 console.log(emojifyWord(":heart:"));
 console.log(emojifyWord(":flower:"));
 console.log(emojifyWord("elephant"));
+
+function emojifyPhrase(phrase){
+    const resPhrase = phrase.split(' ')
+    .map(word => emojifyWord(word)).join(' ')
+    return resPhrase
+}
+
+console.log(emojifyPhrase("I :heart: my :cat:"));
+console.log(emojifyPhrase("I :heart: my :elephant:"));
