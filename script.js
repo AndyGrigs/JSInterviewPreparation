@@ -1,67 +1,7 @@
 
 
 
-/* Whispering function 
-Write a function `whisper` that takes in a sentence 
-and returns a new sentence in all lowercase letters with
-"shh..." at the beginning. 
 
-The function should also remove an exclamation point
-at the end of the sentence, if there is one. 
-
-Example 
-input: "The KITTENS are SLEEPING!"
-output: "shh... the kittens are sleeping"
-
-Hint: endsWith and slice
-*/
-
-function whisper(str) {
-if(str.endsWith("!")){
-  return "sh..." + str.slice(0, -1).toLowerCase()
-}
-  return "sh..." + str.toLowerCase()
-}
-
-
-
-/*  Emojify!
-
-Popular services like Slack and Github allow for emoji shortscodes, meaning 
-they will detect when a word in a sentence begins and ends with a colon (:)
-and automatically replace that word with an emoji. 
-
-These shortcodes allow users to add an emoji to their messages by typing a 
-code rather than searching for an emoji from a list. 
-
-For example, typing :smile: will replace that text with 😊 
-
-*/
-
-const emojis = {
-    "smile": "😊",
-    "angry": "😠",
-    "party": "🎉",
-    "heart": "💜",
-    "cat":   "🐱",
-    "dog":   "🐕"
-}
-
-/* 1. Write a function that checks if a lowercase word starts and 
-ends with a colon. If it does, remove the colons and
-look up the word in the emoji object. If the word is in the 
-emojis object, return the corresponding emoji.
-If it isn't, return the original word.
-
-Example input: ":party:"
-Example output: 🎉
-
-Example input: ":flower:"
-Example output: "flower"
-
-Example input: "elephant"
-Example output: "elephant"
-*/ 
 
 function emojifyWord(word){
   if(!word.startsWith(':') && !word.endsWith(':')) return word
@@ -92,9 +32,7 @@ function emojifyPhrase(phrase){
 
 
 
-// console.log(emojifyWord(":heart:"));
-// console.log(emojifyWord(":flower:"));
-// console.log(emojifyWord("elephant"));
+
 
 // console.log(emojifyPhrase("I :heart: my :cat:"));
 // console.log(emojifyPhrase("I :heart: my :elephant:"));
