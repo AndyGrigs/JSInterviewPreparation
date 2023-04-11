@@ -186,3 +186,20 @@ function findTheWinner(obj){
 }
 
 console.log(findTheWinner(gameNightFood));
+
+
+/*Write a function that takes in an array of numbers and returns a new array containing only the even numbers in the original array.
+
+For example, if the input array is [1, 2, 3, 4, 5, 6], the function should return [2, 4, 6].
+
+ */
+const evenArr =(arr) => {
+let res  = []
+ arr.forEach(i=>{
+    if(i%2===0){
+      res.push(i)
+    }
+  })
+return res
+}
+console.log(evenArr([1, 2, 3, 4, 5, 6]))
