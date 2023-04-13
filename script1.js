@@ -15,9 +15,6 @@ function altCaps(str) {
 
 
 
-// console.log(altCaps("I'm almost done to get"))
-// console.log(altCaps("let us have your thoughts about our relationship"));
-
 /* toTitleCase
 Write a function that will capitalize every word in a sentence.  
 
