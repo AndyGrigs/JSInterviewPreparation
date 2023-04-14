@@ -2,19 +2,8 @@
 
 
 
-f
 
-/*Write a program to loop through all the ID numbers and print their prize. 
-Your function's output should look something like this: 
 
-1 - :(
-2 - :(
-3 - Vacation! 
-4 - :(
-5 - $100,000 bonus!
-
-Hint: Remainder operator, modulo 
- */
 
 function awardBonuses() {
   for (let i = 0; i < 100; i++) {
