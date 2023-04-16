@@ -18,7 +18,7 @@ function countChars(str) {
     const count = {}
   
     const name = str.toLowerCase().split(' ').join('')
-    for (let i = 0; i <= name.length; i++) {
+    for (let i = 0; i < name.length; i++) {
       if (!count[name[i]]) {
         count[name[i]] = 1
       } else {
