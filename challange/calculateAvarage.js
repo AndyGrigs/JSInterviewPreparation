@@ -10,9 +10,11 @@ function calculateAverage(numbers){
     const sum = numbers.reduce((acc, num) => acc + num)
     console.log(sum)
     const average = sum / numbers.length
-    average.toFixed(2)
+   
+   
+    return average.toFixed(2);
 
-    return average
+    
 }
 
 console.log(calculateAverage(numbers));
