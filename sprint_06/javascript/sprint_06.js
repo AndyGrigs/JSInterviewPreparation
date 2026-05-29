@@ -9,10 +9,12 @@ const ar_2 = [99, 100, 110];
 document.querySelector('.out-2').textContent = ar_2.join('_');
 // Task 03
 // Створіть масив ar_3, що складається з рядків 'Hello', 'Hi', 'Trust'. Тип даних вкажіть самостійно. Напишіть функцію f03, яка фільтрує масив ar3, повертаючи новий масив, в якому знаходяться елементи довжиною не менше 4 символів.
-// const ar_3
+const ar_3 = ['Hello', 'Hi', 'Trust'];
 // тут створюєте f03 стрілкову!!!
+const f03 = (arr) => arr.filter(str => str.length >= 4);
+console.log(f03(ar_3));
 document.querySelector('.b-3').addEventListener('click', () => {
-    // document.querySelector('.out-3').textContent = f03(ar_3).join(' ');
+    document.querySelector('.out-3').textContent = f03(ar_3).join(' ');
 });
 // Task 04
 // Створіть масив ar_4 що складається з чисел. Заповніть значеннями самостійно. Напишіть функцію f04, яка приймає масив як аргумент і повертає суму елементів масиву. Тип даних функції напишіть самостійно.

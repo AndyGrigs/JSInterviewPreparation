@@ -14,12 +14,14 @@ document.querySelector('.out-2')!.textContent = ar_2.join('_')
 // Task 03
 // Створіть масив ar_3, що складається з рядків 'Hello', 'Hi', 'Trust'. Тип даних вкажіть самостійно. Напишіть функцію f03, яка фільтрує масив ar3, повертаючи новий масив, в якому знаходяться елементи довжиною не менше 4 символів.
 
-// const ar_3
+const ar_3: string[] = ['Hello', 'Hi', 'Trust']
 
 // тут створюєте f03 стрілкову!!!
+const f03 = (arr: string[]) => arr.filter(str => str.length >= 4)
+console.log(f03(ar_3))
 
 document.querySelector('.b-3')!.addEventListener('click', () : void => {
-    // document.querySelector('.out-3').textContent = f03(ar_3).join(' ');
+    document.querySelector('.out-3')!.textContent = f03(ar_3).join(' ');
 });
 
 // Task 04
@@ -58,7 +60,7 @@ const ar_06 : (number|boolean)[] = [1, false, 2, true, 5, false];
 
 
 
-document.querySelector('.b-6').addEventListener('click', ():void=> {
+document.querySelector('.b-6')!.addEventListener('click', ():void=> {
     // document.querySelector('.out-6').textContent = f06().join('=');
 });
 
@@ -82,7 +84,7 @@ document.querySelector('.b-6').addEventListener('click', ():void=> {
 // тут створюєте f09 стрілкову!!!
 
 
-document.querySelector('.b-9').addEventListener('click', ():void=> {
+document.querySelector('.b-9')!.addEventListener('click', ():void=> {
     // document.querySelector('.out-9').textContent = f09(4).join('_');
 });
 
@@ -93,7 +95,7 @@ document.querySelector('.b-9').addEventListener('click', ():void=> {
 // тут створюєте f10 стрілкову!!!
 
 
-document.querySelector('.b-10').addEventListener('click', ():void=> {
+document.querySelector('.b-10')!.addEventListener('click', ():void=> {
     // const ar_10 : number[] = [22, 33, 44, 55, 66, 66, 88, 77];
     // document.querySelector('.out-101').textContent = f10(ar_10)[0].join('_');
     // document.querySelector('.out-102').textContent = f10(ar_10)[1].join('_');
