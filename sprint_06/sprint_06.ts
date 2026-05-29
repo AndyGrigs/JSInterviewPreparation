@@ -68,11 +68,11 @@ document.querySelector('.b-5')!.addEventListener('click', f05);
 const ar_06 : (number|boolean)[] = [1, false, 2, true, 5, false];
 
 // тут створюєте f06 стрілкову!!!
-
+const f06 = () => ar_06.filter(i=> typeof(i) === 'number')
 
 
 document.querySelector('.b-6')!.addEventListener('click', ():void=> {
-    // document.querySelector('.out-6').textContent = f06().join('=');
+    document.querySelector('.out-6')!.textContent = f06().join('=');
 });
 
 // Task 07

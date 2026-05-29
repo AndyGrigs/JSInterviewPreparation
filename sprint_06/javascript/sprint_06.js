@@ -44,8 +44,9 @@ document.querySelector('.b-5').addEventListener('click', f05);
 // Напишіть функцію f06, яка створює масив що складається лише з чисел масиву ar_06 та повертає його.
 const ar_06 = [1, false, 2, true, 5, false];
 // тут створюєте f06 стрілкову!!!
+const f06 = () => ar_06.filter(i => typeof (i) === 'number');
 document.querySelector('.b-6').addEventListener('click', () => {
-    // document.querySelector('.out-6').textContent = f06().join('=');
+    document.querySelector('.out-6').textContent = f06().join('=');
 });
 // Task 07
 // Створіть readonly масив ar_07 що містить лише два значення true, false. Тип задайте самостійно. Виведіть масив у консоль.
