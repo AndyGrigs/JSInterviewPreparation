@@ -27,12 +27,14 @@ document.querySelector('.b-3')!.addEventListener('click', () : void => {
 // Task 04
 // Створіть масив ar_4 що складається з чисел. Заповніть значеннями самостійно. Напишіть функцію f04, яка приймає масив як аргумент і повертає суму елементів масиву. Тип даних функції напишіть самостійно.
 
-// const ar_4
+const ar_4: number[] = [1, 2, 7, 8, 9, 10]
+
 
 // тут створюєте f04 стрілкову!!!
+const f04 = (arr: number[]) => arr.reduce((acc, num) => acc + num,  0)
 
 document.querySelector('.b-4')!.addEventListener('click', () : void => {
-    // document.querySelector('.out-4').textContent = String(f04(ar_4));
+    document.querySelector('.out-4')!.textContent = String(f04(ar_4));
 });
 
 
