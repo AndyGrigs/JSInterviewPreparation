@@ -30,7 +30,16 @@ const ar_5 = [];
 ar_5[2] = 333;
 ar_5[4] = 777;
 // тут створюєте f05 стрілкову!!!
-// document.querySelector('.b-5').addEventListener('click', f05);
+const f05 = () => {
+    let result = '';
+    for (let i = 0; i < ar_5.length; i++) {
+        if (ar_5[i] === undefined)
+            continue;
+        result += (result ? '-' : '') + ar_5[i];
+    }
+    document.querySelector('.out-5').textContent = result;
+};
+document.querySelector('.b-5').addEventListener('click', f05);
 // Task 06
 // Напишіть функцію f06, яка створює масив що складається лише з чисел масиву ar_06 та повертає його.
 const ar_06 = [1, false, 2, true, 5, false];

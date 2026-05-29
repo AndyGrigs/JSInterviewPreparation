@@ -46,9 +46,18 @@ ar_5[2] = 333;
 ar_5[4] = 777;
 
 // тут створюєте f05 стрілкову!!!
+const f05 = (): void => {
+    let result = '';
+    for(let i = 0; i < ar_5.length; i++){
+        if(ar_5[i] === undefined) continue;
+        result += (result ? '-' : '') + ar_5[i];
+    }
+    document.querySelector('.out-5')!.textContent = result;
+}
+    
 
 
-// document.querySelector('.b-5').addEventListener('click', f05);
+document.querySelector('.b-5')!.addEventListener('click', f05);
 
 
 
