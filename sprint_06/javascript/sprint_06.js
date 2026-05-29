@@ -50,12 +50,17 @@ document.querySelector('.b-6').addEventListener('click', () => {
 });
 // Task 07
 // Створіть readonly масив ar_07 що містить лише два значення true, false. Тип задайте самостійно. Виведіть масив у консоль.
-// const ar_07
+const ar_07 = [true, false];
+console.log(ar_07);
 // Task 08
 // Створіть функцію, яка зчитує число з input.i-8 і якщо число парне — робить його push у масив ar_08, якщо непарне — unshift у масив. Масив створіть глобально по відношенню до функції. Результат виводьте у .out-8, розділювач — підкреслення.
-// const ar_08
+const ar_08 = [];
 // тут створюєте f08 стрілкову!!!
-// document.querySelector('.b-8').addEventListener('click', f08);
+const f08 = () => {
+    const el = document.querySelector('.i-8');
+    const num = Number(el.value);
+};
+document.querySelector('.b-8').addEventListener('click', f08);
 // Task 09
 // Створіть функцію, яка приймає ціле число n як аргумент і повертає масив довжиною n, заповнений випадковими числами від 0 до 10.
 // тут створюєте f09 стрілкову!!!
