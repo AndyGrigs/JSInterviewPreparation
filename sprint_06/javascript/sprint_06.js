@@ -59,6 +59,13 @@ const ar_08 = [];
 const f08 = () => {
     const el = document.querySelector('.i-8');
     const num = Number(el.value);
+    if (num % 2 === 0) {
+        ar_08.push(num);
+    }
+    else {
+        ar_08.unshift(num);
+    }
+    document.querySelector('.out-8').textContent = ar_08.join('_');
 };
 document.querySelector('.b-8').addEventListener('click', f08);
 // Task 09
