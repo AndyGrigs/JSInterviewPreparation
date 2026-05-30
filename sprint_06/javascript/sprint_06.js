@@ -71,8 +71,15 @@ document.querySelector('.b-8').addEventListener('click', f08);
 // Task 09
 // Створіть функцію, яка приймає ціле число n як аргумент і повертає масив довжиною n, заповнений випадковими числами від 0 до 10.
 // тут створюєте f09 стрілкову!!!
+const f09 = (n) => {
+    let arr = [];
+    for (let i = 0; i < n; i++) {
+        arr.push(Math.floor(Math.random() * 11));
+    }
+    return arr;
+};
 document.querySelector('.b-9').addEventListener('click', () => {
-    // document.querySelector('.out-9').textContent = f09(4).join('_');
+    document.querySelector('.out-9').textContent = f09(4).join('_');
 });
 // Task 10
 // Створіть функцію, яка приймає масив ar_10 і повертає два масиви, перший з яких містить лише парні числа з вихідного масиву, а другий — лише непарні числа.
