@@ -122,12 +122,16 @@ document.querySelector('.b-9')!.addEventListener('click', ():void=> {
 
 
 // тут створюєте f10 стрілкову!!!
-
+const f10 =(arr:number[]) => {
+    const even = arr.filter(i => i%2 === 0)
+    const odd = arr.filter(i => i%2 !== 0)
+    return [even, odd]
+}
 
 document.querySelector('.b-10')!.addEventListener('click', ():void=> {
-    // const ar_10 : number[] = [22, 33, 44, 55, 66, 66, 88, 77];
-    // document.querySelector('.out-101').textContent = f10(ar_10)[0].join('_');
-    // document.querySelector('.out-102').textContent = f10(ar_10)[1].join('_');
+    const ar_10 : number[] = [22, 33, 44, 55, 66, 66, 88, 77];
+    document.querySelector('.out-101')!.textContent = f10(ar_10)[0].join('_');
+    document.querySelector('.out-102')!.textContent = f10(ar_10)[1].join('_');
 });
 
 // Task 11
@@ -136,9 +140,11 @@ document.querySelector('.b-10')!.addEventListener('click', ():void=> {
 const ar_11 : number[] = [1, 0, 0, 0, 0];
 
 // тут створюєте f11 стрілкову!!!
+const f11=(): void => {
+    document.querySelector(".out-11")!.textContent =  ar_11.map(i=> i === 1 ? "x" : i).join(' ')
+}
 
-
-// document.querySelector('.b-11').addEventListener('click', f11);
+document.querySelector('.b-11')!.addEventListener('click', f11);
 
 
 // Task 12

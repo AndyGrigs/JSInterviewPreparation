@@ -84,16 +84,24 @@ document.querySelector('.b-9').addEventListener('click', () => {
 // Task 10
 // Створіть функцію, яка приймає масив ar_10 і повертає два масиви, перший з яких містить лише парні числа з вихідного масиву, а другий — лише непарні числа.
 // тут створюєте f10 стрілкову!!!
+const f10 = (arr) => {
+    const even = arr.filter(i => i % 2 === 0);
+    const odd = arr.filter(i => i % 2 !== 0);
+    return [even, odd];
+};
 document.querySelector('.b-10').addEventListener('click', () => {
-    // const ar_10 : number[] = [22, 33, 44, 55, 66, 66, 88, 77];
-    // document.querySelector('.out-101').textContent = f10(ar_10)[0].join('_');
-    // document.querySelector('.out-102').textContent = f10(ar_10)[1].join('_');
+    const ar_10 = [22, 33, 44, 55, 66, 66, 88, 77];
+    document.querySelector('.out-101').textContent = f10(ar_10)[0].join('_');
+    document.querySelector('.out-102').textContent = f10(ar_10)[1].join('_');
 });
 // Task 11
 // Створіть функцію, яка виводить у .out-11 одновимірний масив ar_11. Якщо в масиві зустрічається число 1, то при виводі воно замінюється на 'X' — латинську X у верхньому регістрі. Розділювач — пробіл.
 const ar_11 = [1, 0, 0, 0, 0];
 // тут створюєте f11 стрілкову!!!
-// document.querySelector('.b-11').addEventListener('click', f11);
+const f11 = () => {
+    document.querySelector(".out-11").textContent = ar_11.map(i => i === 1 ? "x" : i).join(' ');
+};
+document.querySelector('.b-11').addEventListener('click', f11);
 // Task 12
 // Створіть функцію, яка виводить у .out-12 одновимірний масив ar_12. Якщо в масиві зустрічається число 1, то при виводі воно замінюється на 'X' — латинську X у верхньому регістрі. Розділювач — пробіл. При натисканні кнопки значення 1 в масиві має зміщуватися вправо, а старе положення замінюватися на 0. Положення одиниці визначається лічильником count.
 const ar_12 = [1, 0, 0, 0, 0];
