@@ -99,7 +99,7 @@ document.querySelector('.b-10').addEventListener('click', () => {
 const ar_11 = [1, 0, 0, 0, 0];
 // тут створюєте f11 стрілкову!!!
 const f11 = () => {
-    document.querySelector(".out-11").textContent = ar_11.map(i => i === 1 ? "x" : i).join(' ');
+    document.querySelector(".out-11").textContent = ar_11.map(i => i === 1 ? "X" : i).join(' ');
 };
 document.querySelector('.b-11').addEventListener('click', f11);
 // Task 12
