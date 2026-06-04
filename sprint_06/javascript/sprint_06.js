@@ -107,7 +107,13 @@ document.querySelector('.b-11').addEventListener('click', f11);
 const ar_12 = [1, 0, 0, 0, 0];
 let count = 0;
 // тут створюєте f12 стрілкову!!!
-// document.querySelector('.b-12').addEventListener('click', f12);
+const f12 = () => {
+    ar_12[count] = 0;
+    count = (count + 1) % ar_12.length;
+    ar_12[count] = 1;
+    document.querySelector(".out-12").textContent = ar_12.map(i => i === 1 ? "X" : i).join(' ');
+};
+document.querySelector('.b-12').addEventListener('click', f12);
 // Task 13
 // Створіть функцію яка в масиві ar_13 замінює числа 1 на 0, а 0 на 1. Виводить масив на сторінку, розділювач між елементами — пробіл, розділювач між рядками — перенос рядка.
 const ar_13 = [
