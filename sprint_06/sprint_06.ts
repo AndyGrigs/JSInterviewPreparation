@@ -174,20 +174,27 @@ const ar_13 : number[][] = [
 ];
 
 // тут створюєте f13 стрілкову!!!
+const f13 = () => {
+    const result = ar_13.map(row => 
+        row.map(num => num === 1 ? 0 : 1).join(' ')
+    ).join('\n');
+    document.querySelector('.out-13')!.textContent = result;
+}
 
-
-// document.querySelector('.b-13').addEventListener('click', f13);
+document.querySelector('.b-13')!.addEventListener('click', f13);
 
 // Task 14
 // Створіть кортеж k14 типу string, string і заповніть його 'type', 'script'. Для перевірки виведіть у консоль.
 
-// const k14
+const k14: [string, string] = ['type', 'script']
+console.log(k14)
 
 
 // Task 15
 // Створіть кортеж k15 типу number, number і заповніть його числами 77, 99. Для перевірки виведіть у консоль.
 
-// const k15
+const k15: [number, number] = [77,99];
+console.log(k15)
 
 // Task 16
 // Створено кортеж k16. Напишіть функцію, яка змінює в ньому числа — додає до кожного числа по 10 і виводить у .out-16 суму елементів кортежу.
