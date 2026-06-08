@@ -202,9 +202,13 @@ console.log(k15)
 const k16 : [number, number] = [77, 88];
 
 // тут створюєте f16 стрілкову!!!
+const f16 = () => {
+    k16[0] += 10;
+    k16[1] += 10;
+    document.querySelector('.out-16')!.textContent = String(k16[0] + k16[1])
+}
 
-
-// document.querySelector('.b-16').addEventListener('click', f16);
+document.querySelector('.b-16')!.addEventListener('click', f16);
 
 
 // Task 17
@@ -213,8 +217,10 @@ const k16 : [number, number] = [77, 88];
 let k17 : [...number[]] = [2, 2, 3, 4];
 
 // тут створюєте f17 стрілкову!!!
-
-// document.querySelector('.b-17').addEventListener('click', f17);
+const f17 = () => {
+   document.querySelector('.out-17')!.textContent = String(k17.reduce((s, i)=> s+i ,0))
+}
+document.querySelector('.b-17')!.addEventListener('click', f17);
 
 
 

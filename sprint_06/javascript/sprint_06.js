@@ -139,12 +139,20 @@ console.log(k15);
 // Створено кортеж k16. Напишіть функцію, яка змінює в ньому числа — додає до кожного числа по 10 і виводить у .out-16 суму елементів кортежу.
 const k16 = [77, 88];
 // тут створюєте f16 стрілкову!!!
-// document.querySelector('.b-16').addEventListener('click', f16);
+const f16 = () => {
+    k16[0] += 10;
+    k16[1] += 10;
+    document.querySelector('.out-16').textContent = String(k16[0] + k16[1]);
+};
+document.querySelector('.b-16').addEventListener('click', f16);
 // Task 17
 // Створено кортеж k17. Напишіть функцію, яка виводить у .out-17 суму елементів кортежу. Зверніть увагу — кількість елементів кортежу при перевірці може змінюватися.
 let k17 = [2, 2, 3, 4];
 // тут створюєте f17 стрілкову!!!
-// document.querySelector('.b-17').addEventListener('click', f17);
+const f17 = () => {
+    document.querySelector('.out-17').textContent = String(k17.reduce((s, i) => s + i, 0));
+};
+document.querySelector('.b-17').addEventListener('click', f17);
 // Task 18
 // Створено кортеж k18 readonly типу boolean, що містить елементи true, false. Напишіть функцію f18, яка виводить у .out-18 значення кортежу через пробіл. Кортеж оголошено глобально по відношенню до функції.
 let k18 = [true, false];
