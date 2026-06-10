@@ -240,9 +240,11 @@ document.querySelector('.b-18')!.addEventListener('click', f18);
 let k19 : readonly [boolean, boolean] = [true, false];
 
 // тут створюєте f19 стрілкову!!!
+const f19 = () => {
+    document.querySelector('.out-19')!.textContent = String(k19.length)
+}
 
-
-// document.querySelector('.b-19').addEventListener('click', f19);
+document.querySelector('.b-19')!.addEventListener('click', f19);
 
 // Task 20
 // Створіть кортеж k20, що містить масив чисел [2, 3]. Виведіть у консоль.
