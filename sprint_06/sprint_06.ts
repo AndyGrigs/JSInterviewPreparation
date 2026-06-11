@@ -248,5 +248,5 @@ document.querySelector('.b-19')!.addEventListener('click', f19);
 
 // Task 20
 // Створіть кортеж k20, що містить масив чисел [2, 3]. Виведіть у консоль.
-
-// const k20
+const k20: [number[]] = [[2, 3]]
+console.log(k20)
