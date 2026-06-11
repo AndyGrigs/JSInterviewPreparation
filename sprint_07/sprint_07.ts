@@ -28,7 +28,7 @@ const f04 = (): void => {
 
 }
 
-document.querySelector('.b-4').addEventListener('click', f04);
+document.querySelector('.b-4')!.addEventListener('click', f04);
 
 
 // Task 05
@@ -45,7 +45,7 @@ const f05 = () => {
     return;
 }
 
-document.querySelector('.b-5').addEventListener('click', (): void => {
+document.querySelector('.b-5')!.addEventListener('click', (): void => {
     console.log(f05());
 });
 
@@ -64,7 +64,7 @@ const f06 = (): string[] => {
     return;
 }
 
-document.querySelector('.b-6').addEventListener('click', (): void => {
+document.querySelector('.b-6')!.addEventListener('click', (): void => {
     console.log(f06());
 });
 
