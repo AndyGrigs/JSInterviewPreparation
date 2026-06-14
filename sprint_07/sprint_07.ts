@@ -22,8 +22,13 @@ console.log(Days)
 
 // Task 03
 // Создайте enum с именем CardinalPoints содержащий стороны света: north, south, east, west. Для каждой стороны задайте число north - 12, east - 3, south - 6, west - 9. Выведите в консоль.
-
-
+enum CardinalPoints {
+  north = 12,
+  south =6, 
+  east = 3,
+  west = 9
+}
+console.log(CardinalPoints);
 
 // Task 04
 // Создан enums Data_04. Напишите функцию f04, которая получает keys из Data_04 с помощью Object.keys и выводит в .out-4 через пробел. Числовые данные должны быть отфильтрованы.
@@ -36,7 +41,7 @@ enum Data_04 {
 }
 
 const f04 = (): void => {
-
+     return Object.keys(Data_04);
 }
 
 document.querySelector('.b-4')!.addEventListener('click', f04);
