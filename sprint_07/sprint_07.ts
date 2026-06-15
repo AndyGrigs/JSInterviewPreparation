@@ -63,7 +63,7 @@ enum Wolves {
 }
 
 const f05 = () => {
-    return;
+    return Object.keys(Wolves) ;
 }
 
 document.querySelector('.b-5')!.addEventListener('click', (): void => {
