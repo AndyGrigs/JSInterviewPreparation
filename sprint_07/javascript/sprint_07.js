@@ -58,7 +58,7 @@ var Wolves;
     Wolves[Wolves["Teleportation"] = 2] = "Teleportation";
     Wolves[Wolves["Bite"] = 10] = "Bite";
 })(Wolves || (Wolves = {}));
-console.log(Object.keys(Wolves));
+// console.log(Object.keys(Wolves))
 const f05 = () => {
     return Object.keys(Wolves).filter(key => isNaN(Number(key)));
 };
@@ -73,26 +73,55 @@ var TrafficLight;
     TrafficLight["Yellow"] = "Y";
     TrafficLight["Red"] = "R";
 })(TrafficLight || (TrafficLight = {}));
-// const f06 = (): string[] =>{}
+const f06 = () => {
+    return Object.values(TrafficLight);
+};
 document.querySelector('.b-6').addEventListener('click', () => {
-    // console.log(f06());
+    console.log(f06());
 });
 // Task 07
 // Создайте enum с названием TsTypes, где перечисляются типы данных: number, string, boolean и им соответствуют сокращения num, str, bool. Выведите в консоль.
+var TsTypes;
+(function (TsTypes) {
+    TsTypes["number"] = "num";
+    TsTypes["string"] = "str";
+    TsTypes["boolean"] = "bool";
+})(TsTypes || (TsTypes = {}));
+console.log(TsTypes);
 // Task 08
 // Создайте enum Time которая содержит перечисление hr, min, sec, AM, PM и соответствующее им значения hour, minute, second, Ante Meridiem, Post Meridiem. Выведите в консоль.
+var Time;
+(function (Time) {
+    Time["hr"] = "hour";
+    Time["min"] = "minute";
+    Time["sec"] = "second";
+    Time["AM"] = "Ante Meridiem";
+    Time["PM"] = "Post Meridiem";
+})(Time || (Time = {}));
+console.log(Time);
 // Task 09
 // Создайте функцию, которая принимает аргумент типа TsTypes, и возвращает, если number - число 1, если string то строку '1', если boolean то true. Тип данных функции укажите самостоятельно.
 // enum TsTypes
-const f09 = () => {
+const f09 = (i) => {
+    if (i === TsTypes.number)
+        return 1;
+    if (i === TsTypes.string)
+        return '1';
+    return true;
 };
-// document.querySelector('.b-9').addEventListener('click', ():void=> {
-//     console.log( f09(TsTypes.boolean));
-// });
+document.querySelector('.b-9').addEventListener('click', () => {
+    console.log(f09(TsTypes.boolean));
+});
 // Task 10
 // Создайте enum Roles, содержащий ключи admin со значением 1, writer со значением 5, и user со значением 10. Напишите функцию f10, которая может принимать аргумент - тип Roles и если переданная роль admin или writer то возвращает true, в противном случае - false.
-// enum Roles
-// const f10 =
+var Roles;
+(function (Roles) {
+    Roles[Roles["admin"] = 1] = "admin";
+    Roles[Roles["writer"] = 5] = "writer";
+    Roles[Roles["user"] = 10] = "user";
+})(Roles || (Roles = {}));
+const f10 = (role) => {
+};
 // document.querySelector('.b-10').addEventListener('click', ():void=> {
 //    console.log(f10(Roles.writer));
 // });

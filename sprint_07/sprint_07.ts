@@ -61,7 +61,7 @@ enum Wolves {
     "Teleportation" = 2,
     "Bite" = 10
 }
-console.log(Object.keys(Wolves))
+// console.log(Object.keys(Wolves))
 const f05 = ():string[] => {
     return Object.keys(Wolves).filter(key=> isNaN(Number(key))) ;
 }
@@ -80,19 +80,35 @@ enum TrafficLight {
     Red = "R"
 }
 
-// const f06 = (): string[] =>{}
+const f06 = (): string[] =>{
+    return Object.values(TrafficLight)
+}
 
 document.querySelector('.b-6')!.addEventListener('click', (): void => {
-    // console.log(f06());
+    console.log(f06());
 });
 
 // Task 07
 // Создайте enum с названием TsTypes, где перечисляются типы данных: number, string, boolean и им соответствуют сокращения num, str, bool. Выведите в консоль.
 
-
+enum TsTypes {
+    number= 'num',
+    string = 'str', 
+    boolean = 'bool'
+}
+console.log(TsTypes)
 
 // Task 08
 // Создайте enum Time которая содержит перечисление hr, min, sec, AM, PM и соответствующее им значения hour, minute, second, Ante Meridiem, Post Meridiem. Выведите в консоль.
+
+enum Time {
+    hr = 'hour',
+    min = 'minute',
+    sec = 'second',
+    AM = 'Ante Meridiem',
+    PM = 'Post Meridiem'
+}
+console.log(Time);
 
 
 
@@ -101,20 +117,30 @@ document.querySelector('.b-6')!.addEventListener('click', (): void => {
 
 // enum TsTypes
 
-const f09 = () => {
-
+const f09 = (i: TsTypes) => {
+  
+    if(i === TsTypes.number) return 1;
+    if(i=== TsTypes.string) return '1'
+   
+    return true;
 }
 
-// document.querySelector('.b-9').addEventListener('click', ():void=> {
-//     console.log( f09(TsTypes.boolean));
-// });
+document.querySelector('.b-9')!.addEventListener('click', ():void=> {
+    console.log( f09(TsTypes.boolean));
+});
 
 // Task 10
 // Создайте enum Roles, содержащий ключи admin со значением 1, writer со значением 5, и user со значением 10. Напишите функцию f10, которая может принимать аргумент - тип Roles и если переданная роль admin или writer то возвращает true, в противном случае - false.
 
-// enum Roles
+enum Roles {
+    admin = 1,
+    writer = 5,
+    user = 10
+}
 
-// const f10 =
+const f10 =  (role: Roles) => {
+    
+}
 
 // document.querySelector('.b-10').addEventListener('click', ():void=> {
 //    console.log(f10(Roles.writer));
