@@ -61,9 +61,9 @@ enum Wolves {
     "Teleportation" = 2,
     "Bite" = 10
 }
-
-const f05 = () => {
-    return Object.keys(Wolves) ;
+console.log(Object.keys(Wolves))
+const f05 = ():string[] => {
+    return Object.keys(Wolves).filter(key=> isNaN(Number(key))) ;
 }
 
 document.querySelector('.b-5')!.addEventListener('click', (): void => {

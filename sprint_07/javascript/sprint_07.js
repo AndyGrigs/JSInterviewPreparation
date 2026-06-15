@@ -24,6 +24,17 @@ var Days;
 console.log(Days);
 // Task 03
 // Создайте enum с именем CardinalPoints содержащий стороны света: north, south, east, west. Для каждой стороны задайте число north - 12, east - 3, south - 6, west - 9. Выведите в консоль.
+var CardinalPoints;
+(function (CardinalPoints) {
+    CardinalPoints[CardinalPoints["north"] = 12] = "north";
+    CardinalPoints[CardinalPoints["south"] = 6] = "south";
+    CardinalPoints[CardinalPoints["east"] = 3] = "east";
+    CardinalPoints[CardinalPoints["west"] = 9] = "west";
+})(CardinalPoints || (CardinalPoints = {}));
+console.log(CardinalPoints.north);
+console.log(CardinalPoints.south);
+console.log(CardinalPoints.east);
+console.log(CardinalPoints.west);
 // Task 04
 // Создан enums Data_04. Напишите функцию f04, которая получает keys из Data_04 с помощью Object.keys и выводит в .out-4 через пробел. Числовые данные должны быть отфильтрованы.
 var Data_04;
@@ -34,6 +45,8 @@ var Data_04;
     Data_04[Data_04["Hex"] = 3] = "Hex";
 })(Data_04 || (Data_04 = {}));
 const f04 = () => {
+    const keys = Object.keys(Data_04).filter(key => isNaN(Number(key)));
+    document.querySelector('.out-4').textContent = keys.join(' ');
 };
 document.querySelector('.b-4').addEventListener('click', f04);
 // Task 05
@@ -45,8 +58,9 @@ var Wolves;
     Wolves[Wolves["Teleportation"] = 2] = "Teleportation";
     Wolves[Wolves["Bite"] = 10] = "Bite";
 })(Wolves || (Wolves = {}));
+console.log(Object.keys(Wolves));
 const f05 = () => {
-    return;
+    return Object.keys(Wolves).filter(key => isNaN(Number(key)));
 };
 document.querySelector('.b-5').addEventListener('click', () => {
     console.log(f05());
