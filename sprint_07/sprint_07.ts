@@ -139,9 +139,9 @@ enum Roles {
 }
 
 const f10 =  (role: Roles) => {
-    
+    return role === Roles.admin || Roles.writer;
 }
 
-// document.querySelector('.b-10').addEventListener('click', ():void=> {
-//    console.log(f10(Roles.writer));
-// });
+document.querySelector('.b-10')!.addEventListener('click', ():void=> {
+   console.log(f10(Roles.writer));
+});
